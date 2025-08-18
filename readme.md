@@ -69,7 +69,7 @@ model Appointment {
 
 ```env
 DATABASE_URL="prisma+postgres://<your-cloud-db-url>"
-PORT=5000
+PORT=3000
 ```
 
 **Prisma Commands:**
@@ -188,15 +188,6 @@ npm run dev
   }
 }
 ```
-## **8️⃣ Notes**
 
-* Make sure **PostgreSQL cloud database** URL is correct in `.env`
-* Use **Prisma Studio** to view tables visually
-* `Cascade delete` ensures deleting a patient removes their appointments
-* Swagger UI allows direct testing without Postman
-
-
-
----
 
 
