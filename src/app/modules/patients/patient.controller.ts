@@ -23,7 +23,8 @@ export const PatientController = {
     try {
       const { id } = req.params;
       const patient = await PatientService.getPatientById(Number(id));
-      if (!patient) return res.status(404).json({ message: "Patient not found" });
+      if (!patient)
+        return res.status(404).json({ message: "Patient not found" });
       res.json(patient);
     } catch (err: any) {
       res.status(400).json({ message: err.message });

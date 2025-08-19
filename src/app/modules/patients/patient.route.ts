@@ -124,4 +124,3 @@ router.put("/:id", PatientController.update);
 router.delete("/:id", PatientController.delete);
 
 export const PatientRoutes = router;
-

@@ -4,7 +4,7 @@ import router from "./app/routes/routes";
 import { setupSwagger } from "./swagger";
 const app = express();
 
-// 🔹 Middleware
+// Middleware
 app.use(cors());
 app.use(express.json());
 

@@ -22,7 +22,7 @@ const startServer = async () => {
   await startServer();
 })();
 
-// Graceful Shutdown
+
 process.on("SIGTERM", () => {
   console.log("SIGTERM signal received... Server shutting down..");
   if (server) {

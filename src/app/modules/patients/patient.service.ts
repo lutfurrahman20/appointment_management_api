@@ -4,19 +4,19 @@ import { IPatient } from "./patient.interface";
 const prisma = new PrismaClient();
 
 export const PatientService = {
-  // CREATE
+  // Create
   createPatient: async (data: IPatient) => {
     return prisma.patient.create({ data });
   },
 
-  // READ all
+  // Read all
   getPatients: async () => {
     return prisma.patient.findMany({
-      include: { appointments: true }, 
+      include: { appointments: true },
     });
   },
 
-  // READ one
+  // Read one
   getPatientById: async (id: number) => {
     return prisma.patient.findUnique({
       where: { id },
@@ -24,7 +24,7 @@ export const PatientService = {
     });
   },
 
-  // UPDATE
+  // Update
   updatePatient: async (id: number, data: Partial<IPatient>) => {
     return prisma.patient.update({
       where: { id },
@@ -32,7 +32,7 @@ export const PatientService = {
     });
   },
 
-  // DELETE
+  // Delete
   deletePatient: async (id: number) => {
     return prisma.patient.delete({ where: { id } });
   },

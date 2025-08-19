@@ -4,7 +4,7 @@ import { IAppointment } from "./appointment.interface";
 const prisma = new PrismaClient();
 
 export const AppointmentService = {
-  // CREATE
+  // Create
   createAppointment: async (data: IAppointment) => {
     const patient = await prisma.patient.findUnique({
       where: { id: data.PatientId },
@@ -23,12 +23,12 @@ export const AppointmentService = {
     return appointment;
   },
 
-  // READ (all)
+  // Get All
   getAppointments: async () => {
     return prisma.appointment.findMany({ include: { patient: true } });
   },
 
-  // UPDATE
+  // Update
   updateAppointment: async (id: number, data: Partial<IAppointment>) => {
     return prisma.appointment.update({
       where: { id },
@@ -42,7 +42,7 @@ export const AppointmentService = {
     });
   },
 
-  // DELETE
+  // Delete
   deleteAppointment: async (id: number) => {
     return prisma.appointment.delete({ where: { id } });
   },
