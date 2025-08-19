@@ -184,7 +184,7 @@ npm run dev
 ```json
 {
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts && npx prisma studio"
+    "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts"
   }
 }
 ```
