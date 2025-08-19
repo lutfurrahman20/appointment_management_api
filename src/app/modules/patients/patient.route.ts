@@ -12,7 +12,7 @@ const router = Router();
 
 /**
  * @swagger
- * /patients:
+ * /api/v1/patients:
  *   post:
  *     summary: Create a new patient
  *     tags: [Patients]
@@ -40,7 +40,7 @@ router.post("/", PatientController.create);
 
 /**
  * @swagger
- * /patients:
+ * /api/v1/patients:
  *   get:
  *     summary: Get all patients
  *     tags: [Patients]
@@ -52,7 +52,7 @@ router.get("/", PatientController.getAll);
 
 /**
  * @swagger
- * /patients/{id}:
+ * /api/v1/patients/{id}:
  *   get:
  *     summary: Get a patient by ID
  *     tags: [Patients]
@@ -71,7 +71,7 @@ router.get("/:id", PatientController.getById);
 
 /**
  * @swagger
- * /patients/{id}:
+ * /api/v1/patients/{id}:
  *   put:
  *     summary: Update a patient by ID
  *     tags: [Patients]
@@ -106,7 +106,7 @@ router.put("/:id", PatientController.update);
 
 /**
  * @swagger
- * /patients/{id}:
+ * /api/v1/patients/{id}:
  *   delete:
  *     summary: Delete a patient by ID
  *     tags: [Patients]

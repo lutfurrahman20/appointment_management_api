@@ -12,7 +12,7 @@ const router = Router();
 
 /**
  * @swagger
- * /appointments:
+ * /api/v1/appointments:
  *   post:
  *     summary: Create a new appointment
  *     tags: [Appointments]
@@ -44,7 +44,7 @@ router.post("/", AppointmentController.create);
 
 /**
  * @swagger
- * /appointments:
+ * /api/v1/appointments:
  *   get:
  *     summary: Get all appointments
  *     tags: [Appointments]
@@ -56,7 +56,7 @@ router.get("/", AppointmentController.getAll);
 
 /**
  * @swagger
- * /appointments/{id}:
+ * /api/v1/appointments/{id}:
  *   put:
  *     summary: Update an appointment by ID
  *     tags: [Appointments]
@@ -95,7 +95,7 @@ router.put("/:id", AppointmentController.update);
 
 /**
  * @swagger
- * /appointments/{id}:
+ * /api/v1/appointments/{id}:
  *   delete:
  *     summary: Delete an appointment by ID
  *     tags: [Appointments]
